@@ -38,8 +38,8 @@ const Navbar = () => {
       }`}
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
-        <a href="#" className="text-xl md:text-2xl font-bold text-primary">
-          Design<span className="text-foreground">Studio</span>
+        <a href="#" className="text-xl md:text-2xl font-bold">
+          <span className="text-primary">Design</span>Journey
         </a>
 
         {/* Desktop Navigation */}
@@ -53,6 +53,14 @@ const Navbar = () => {
               {item.name}
             </a>
           ))}
+        </div>
+
+        {/* CTA Button */}
+        <div className="hidden md:block">
+          <Button size="sm" className="bg-primary text-white hover:bg-primary/90">
+            Связаться
+            <Icon name="ArrowRight" className="ml-2" size={16} />
+          </Button>
         </div>
 
         {/* Mobile Menu Button */}
@@ -78,6 +86,9 @@ const Navbar = () => {
                 {item.name}
               </a>
             ))}
+            <Button size="sm" className="bg-primary text-white hover:bg-primary/90 w-full">
+              Связаться
+            </Button>
           </div>
         )}
       </div>
